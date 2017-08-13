@@ -1,12 +1,13 @@
 {
   "name": "personal-site-angular",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "lint": "ng lint",
-    "deploy": "ngh --branch master --repo https://github.com/chadxz/chadxz.github.io --message \"personal-site-angular v$npm_package_version\""
+    "upload": "ngh --branch master --repo https://github.com/chadxz/chadxz.github.io --message \"personal-site-angular v$npm_package_version\"",
+    "deploy": "npm run build && npm run upload"
   },
   "private": true,
   "repository": {
