@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+  <div class="panel-heading text-center">
+    Recent listens via Last.fm
+  </div>
+  <div class="panel-body lastfm-track-list">
+    <ul id="lastfmTracks" class="list-unstyled">
+      <li *ngFor="let track of tracks">
+        <a href={{track.artist.url}} title="{{track.artist.name}} on Last.fm">{{track.artist.name}}</a> -
+        <a href={{track.url}} title="{{track.artist.name}} on Last.fm">{{track.name}}</a>
+        <div *ngIf="track.isPlaying; then currentTrack else pastTrack"></div>
+        <ng-template #currentTrack>
+          <small><span>&#x266C;</span> now playing <span>&#x266C;</span></small>
+        </ng-template>
+        <ng-template #pastTrack>
+          <small><abbr title={{track.time.formatted}}>{{track.time.relative}}</abbr></small>
+        </ng-template>
+      </li>
+    </ul>
+    <a href="http://www.last.fm/user/chadxz" title="Chad's Last.fm profile">View listening profile at Last.fm</a>
+  </div>
+</div>

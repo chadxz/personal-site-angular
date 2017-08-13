@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+  <div class="panel-heading text-center">
+    Recently read articles on Pocket
+  </div>
+  <div class="panel-body pocket-article-list">
+    <ul id="articleList" class="list-unstyled">
+      <li *ngFor="let article of articles">
+        <a href={{article.url}} title={{article.title.display}}>
+          {{article.title.formatted}} | {{article.host}}
+        </a>
+        <small><abbr title={{article.time.formatted}}>{{article.time.relative}}</abbr></small>
+      </li>
+    </ul>
+    <em>Viewing all my read articles isn't available at this time.</em>
+  </div>
+</div>

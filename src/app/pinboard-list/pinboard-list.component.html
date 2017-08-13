@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+  <div class="panel-heading text-center">
+    Recent bookmarks on Pinboard
+  </div>
+  <div class="panel-body pinboard-list">
+    <ul id="pinboardItems" class="list-unstyled">
+      <li *ngFor="let bookmark of bookmarks">
+        <a href={{bookmark.url}}>{{bookmark.description}}</a>
+        <small><abbr title={{bookmark.time.formatted}}>{{bookmark.time.relative}}</abbr></small>
+      </li>
+    </ul>
+    <a href="https://pinboard.in/u:chadxz" title="Chad's pinboard">View all bookmarks at pinboard.in</a>
+  </div>
+</div>
