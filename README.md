@@ -17,4 +17,7 @@ npm install
 npm start
 ```
 
-### work in progress
+### to deploy
+
+- bump version in package.json and commit
+- `npm run deploy` to deploy to https://github.com/chadxz/chadxz.github.io
