@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "deploy": "ngh --branch master --repo https://github.com/chadxz/chadxz.github.io --message \"personal-site-angular v$npm_package_version\""
   },
   "private": true,
   "repository": {
@@ -30,11 +31,14 @@
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@types/node": "~6.0.60",
+    "angular-cli-ghpages": "^0.5.1",
     "bootstrap": "^4.0.0-beta",
     "codelyzer": "~3.1.1",
     "core-js": "^2.4.1",
     "date-fns": "^1.28.5",
     "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.11.1",
     "rxjs": "^5.4.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.3.2",
