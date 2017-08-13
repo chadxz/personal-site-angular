@@ -1,8 +1,8 @@
-<div class="panel panel-default">
-  <div class="panel-heading text-center">
+<div class="card mb-3">
+  <div class="card-header text-center">
     Recent bookmarks on Pinboard
   </div>
-  <div class="panel-body pinboard-list">
+  <div class="card-body pinboard-list">
     <ul id="pinboardItems" class="list-unstyled">
       <li *ngFor="let bookmark of bookmarks">
         <a href={{bookmark.url}}>{{bookmark.description}}</a>

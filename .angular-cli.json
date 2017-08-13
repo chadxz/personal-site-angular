@@ -9,7 +9,9 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        "CNAME",
+        "keybase.txt"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -22,11 +24,7 @@
         "../node_modules/font-awesome/css/font-awesome.css"
       ],
       "scripts": [],
-      "environmentSource": "environments/environment.ts",
-      "environments": {
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
-      }
+      "environmentSource": "environments/environment.ts"
     }
   ],
   "lint": [

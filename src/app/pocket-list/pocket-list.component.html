@@ -1,8 +1,8 @@
-<div class="panel panel-default">
-  <div class="panel-heading text-center">
+<div class="card mb-3">
+  <div class="card-header text-center">
     Recently read articles on Pocket
   </div>
-  <div class="panel-body pocket-article-list">
+  <div class="card-body pocket-article-list">
     <ul id="articleList" class="list-unstyled">
       <li *ngFor="let article of articles">
         <a href={{article.url}} title={{article.title.display}}>

@@ -2,8 +2,12 @@ p, h1, h2, h3, h4, a {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-p {
-  font-size: 1.125em;
+h3 {
+  font-size: 1.5rem !important;
+}
+
+body {
+  font-size: .9rem !important;
 }
 
 .page-title {

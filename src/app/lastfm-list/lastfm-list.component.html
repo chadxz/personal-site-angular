@@ -1,8 +1,8 @@
-<div class="panel panel-default">
-  <div class="panel-heading text-center">
+<div class="card mb-3">
+  <div class="card-header text-center">
     Recent listens via Last.fm
   </div>
-  <div class="panel-body lastfm-track-list">
+  <div class="card-body lastfm-track-list">
     <ul id="lastfmTracks" class="list-unstyled">
       <li *ngFor="let track of tracks">
         <a href={{track.artist.url}} title="{{track.artist.name}} on Last.fm">{{track.artist.name}}</a> -
