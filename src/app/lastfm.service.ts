@@ -15,10 +15,14 @@ export class LastfmService {
   constructor(private http: HttpClient) { }
 
   static cleanTrack(track: any): LastfmTrack {
-    const trackDate = parseDate(track.date.uts * 1000);
+    const unixTimestampSansSeconds =
+      track.date && track.date.uts ||
+      (new Date()).getTime() / 1000;
+
+    const trackDate = parseDate(unixTimestampSansSeconds * 1000);
 
     return {
-      id: track.date && track.date.uts || 'now',
+      id: String(trackDate),
       name: track.name,
       url: track.url,
       artist: {
