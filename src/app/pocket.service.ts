@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
-import URL from 'url-parse';
+import * as URL from 'url-parse';
 import {HttpClient} from '@angular/common/http';
 import {PocketArticle} from './pocket-article';
 import {environment} from '../environments/environment';
-import 'rxjs/add/operator/toPromise';
 import {
   parse as parseDate,
   format as formatDate,
