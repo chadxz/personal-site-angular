@@ -8,7 +8,7 @@ progression so far has been:
  - [Backbone.js and AMD](https://github.com/chadxz/personal-site-rewrite/tree/master)
  - [Backbone.js and Webpack](https://github.com/chadxz/personal-site-rewrite/tree/webpack)
  - [React and Webpack](https://github.com/chadxz/personal-site-react)
- - this project. Angular 5 + Bootstrap 5
+ - this project. Angular 5 + Bootstrap 4
 
 ### to run
 
