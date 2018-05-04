@@ -5,6 +5,6 @@
 
 export const environment = {
   production: true,
-  apiUrl: 'http://immense-refuge-7911.herokuapp.com',
+  apiUrl: 'https://my-api-my-api.193b.starter-ca-central-1.openshiftapps.com/',
   dateTimeFormat: 'MMMM D, YYYY @ h:mm a'
 };
