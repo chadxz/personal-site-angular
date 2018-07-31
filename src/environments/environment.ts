@@ -5,6 +5,6 @@
 
 export const environment = {
   production: true,
-  apiUrl: 'https://my-api-my-api.193b.starter-ca-central-1.openshiftapps.com',
+  apiUrl: 'https://chadxz.now.sh',
   dateTimeFormat: 'MMMM D, YYYY @ h:mm a'
 };
