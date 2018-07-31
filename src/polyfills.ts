@@ -70,3 +70,7 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
  * Need to import at least one locale-data with intl.
  */
 // import 'intl/locale-data/jsonp/en';
+
+// Add global to window, assigning the value of window itself.
+// required by 'url-parse' library
+(window as any).global = window;

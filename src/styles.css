@@ -60,6 +60,7 @@ a:visited {
 small {
   font-style: italic;
   color: #949494;
+  margin-left: 5px;
 }
 
 small span.light {
