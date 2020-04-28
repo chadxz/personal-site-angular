@@ -4,9 +4,11 @@
   "newProjectRoot": "projects",
   "projects": {
     "personal-site-angular": {
+      "projectType": "application",
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "projectType": "application",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -14,8 +16,9 @@
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "aot": true,
             "assets": [
               "src/assets",
               "src/favicon.ico",
@@ -37,10 +40,21 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
             }
           }
         },
@@ -49,7 +63,11 @@
           "options": {
             "browserTarget": "personal-site-angular:build"
           },
-          "configurations": {}
+          "configurations": {
+            "production": {
+              "browserTarget": "personal-site-angular:build:production"
+            }
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -61,7 +79,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "src/tsconfig.app.json"
+              "tsconfig.app.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -69,21 +87,7 @@
           }
         }
       }
-    },
-    "personal-site-angular-e2e": {
-      "root": "e2e",
-      "sourceRoot": "e2e",
-      "projectType": "application"
     }
   },
-  "defaultProject": "personal-site-angular",
-  "schematics": {
-    "@schematics/angular:component": {
-      "prefix": "app",
-      "styleext": "css"
-    },
-    "@schematics/angular:directive": {
-      "prefix": "app"
-    }
-  }
+  "defaultProject": "personal-site-angular"
 }

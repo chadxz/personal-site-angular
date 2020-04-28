@@ -3,9 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { LastfmTrack } from './lastfm-track';
 import {
-  parse as parseDate,
+  toDate,
   format as formatDate,
-  distanceInWordsToNow
+  formatDistanceToNow
 } from 'date-fns';
 
 @Injectable()
@@ -18,7 +18,7 @@ export class LastfmService {
       track.date && track.date.uts ||
       (new Date()).getTime() / 1000;
 
-    const trackDate = parseDate(unixTimestampSansSeconds * 1000);
+    const trackDate = toDate(unixTimestampSansSeconds * 1000);
 
     return {
       id: String(trackDate),
@@ -30,7 +30,7 @@ export class LastfmService {
       },
       isPlaying: track['@attr'] && (track['@attr'].nowplaying === 'true') || false,
       time: {
-        relative: distanceInWordsToNow(trackDate, { addSuffix: true }),
+        relative: formatDistanceToNow(trackDate, { addSuffix: true }),
         formatted: formatDate(trackDate, environment.dateTimeFormat)
       }
     };

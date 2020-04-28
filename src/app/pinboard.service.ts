@@ -3,9 +3,9 @@ import {HttpClient} from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { PinboardBookmark } from './pinboard-bookmark';
 import {
-  parse as parseDate,
+  parseISO,
   format as formatDate,
-  distanceInWordsToNow
+  formatDistanceToNow
 } from 'date-fns';
 
 @Injectable()
@@ -14,14 +14,14 @@ export class PinboardService {
   constructor(private http: HttpClient) { }
 
   static cleanBookmark(bookmark: any): PinboardBookmark {
-    const bookmarkDate = parseDate(bookmark.time);
+    const bookmarkDate = parseISO(bookmark.time);
 
     return {
       id: bookmark.hash,
       url: bookmark.href,
       description: bookmark.description,
       time: {
-        relative: distanceInWordsToNow(bookmarkDate, { addSuffix: true }),
+        relative: formatDistanceToNow(bookmarkDate, { addSuffix: true }),
         formatted: formatDate(bookmarkDate, environment.dateTimeFormat)
       }
     };
