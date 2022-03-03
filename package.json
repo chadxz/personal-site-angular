@@ -36,7 +36,7 @@
     "popper.js": "^1.16.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
-    "url-parse": "^1.4.7",
+    "url-parse": "^1.5.9",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
